@@ -1,0 +1,15 @@
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Bll\bin\Debug\eCommerce.Bll.dll
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Bll\bin\Debug\eCommerce.Bll.pdb
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Bll\bin\Debug\eCommerce.Dal.dll
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Bll\bin\Debug\eCommerce.Entities.dll
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Bll\bin\Debug\eCommerce.Interfaces.dll
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Bll\bin\Debug\EntityFramework.dll
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Bll\bin\Debug\eCommerce.Dal.pdb
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Bll\bin\Debug\eCommerce.Dal.dll.config
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Bll\bin\Debug\eCommerce.Entities.pdb
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Bll\bin\Debug\eCommerce.Interfaces.pdb
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Bll\bin\Debug\EntityFramework.xml
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Bll\obj\Debug\eCommerce.Bll.csprojAssemblyReference.cache
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Bll\obj\Debug\eCommerce.Bll.csproj.CopyComplete
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Bll\obj\Debug\eCommerce.Bll.dll
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Bll\obj\Debug\eCommerce.Bll.pdb

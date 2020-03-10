@@ -1,0 +1,52 @@
+﻿.container {
+    margin-top: 0px;
+}
+
+
+@keyframes mover {
+    0% {
+        transform: translateX(0);
+    }
+
+    0% {
+        transform: translateX(-25px);
+    }
+}
+
+i {
+    position: absolute;
+    padding: 11px;
+    color: purple;
+}
+
+.login-right input[type=text] {
+    border-bottom: 5px solid purple;
+    padding-left: 32px;
+}
+
+.login-right input[type=password] {
+    border-bottom: 5px solid purple;
+    padding-left: 32px;
+}
+
+
+
+input[type="checkbox"] {
+    content: url('/Content/user.png');
+    height: 75px;
+    width: 75px;
+    display: block;
+    position: absolute;
+    top: -48px;
+    left: calc(50% - 40px);
+}
+
+    input[type="checkbox"]:checked {
+        content: url('/Content/icons8-user-female-skin-type-7-64.png');
+    }
+
+.native-hidden {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}

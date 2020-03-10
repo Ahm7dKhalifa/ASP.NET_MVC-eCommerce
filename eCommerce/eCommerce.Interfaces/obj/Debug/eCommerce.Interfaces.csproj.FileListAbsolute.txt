@@ -1,0 +1,8 @@
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Interfaces\bin\Debug\eCommerce.Interfaces.dll
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Interfaces\bin\Debug\eCommerce.Interfaces.pdb
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Interfaces\bin\Debug\eCommerce.Entities.dll
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Interfaces\bin\Debug\eCommerce.Entities.pdb
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Interfaces\obj\Debug\eCommerce.Interfaces.csprojAssemblyReference.cache
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Interfaces\obj\Debug\eCommerce.Interfaces.csproj.CopyComplete
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Interfaces\obj\Debug\eCommerce.Interfaces.dll
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Interfaces\obj\Debug\eCommerce.Interfaces.pdb

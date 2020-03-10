@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body style="background-color:white; color: grey">
+
+    <nav class="navbar navbar-expand-lg" style="background-color:#c4151c">
+        <div class="container">
+            <a class="navbar-brand" href="#" style="color:white">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="background-color:white">
+                <span class="navbar-toggler-icon" style="color:red">| | |</span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <div class="input-group input-group-sm">
+                        <input type="text" class="form-control" placeholder="Search...">
+                        <div class="input-group-append">
+                            <button type="button" class="btn btn-secondary btn-number">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                @Html.Action("Summary", "Cart")
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <button style="border-color:transparent;border-radius:30px;padding-top:0px;margin-left:5px">
+
+                <i class="fa fa-user" style="margin-right:5px;color:#c4151c"></i><a href="/Account/Index" style="color:black">@User.Identity.Name</a></button>
+                <a href="/Account/Logout" style="color:white;margin-left:5px"> Çıkış Yap</a>
+                }
+            </div>
+        </div>
+    </nav>
+
+
+    <div style="z-index:100;width:100%;background-color:white;">
+        @RenderBody()
+    </div>
+
+    <div style="bottom:0;position: fixed; width:100%;">
+        <footer style="text-align:center">
+            <p style="color:grey">&copy; @DateTime.Now.Year -Shopping Cart Application | Vahittin Zaim</p>
+        </footer>
+        </div>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="~/Scripts/toastr.js"></script>
+        <link href="~/Content/toastr.css" rel="stylesheet" />
+</body>
+</html>

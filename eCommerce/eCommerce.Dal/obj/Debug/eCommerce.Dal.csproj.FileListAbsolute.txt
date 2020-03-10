@@ -1,0 +1,13 @@
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Dal\bin\Debug\eCommerce.Dal.dll.config
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Dal\bin\Debug\eCommerce.Dal.dll
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Dal\bin\Debug\eCommerce.Dal.pdb
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Dal\bin\Debug\eCommerce.Entities.dll
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Dal\bin\Debug\EntityFramework.dll
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Dal\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Dal\bin\Debug\eCommerce.Entities.pdb
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Dal\bin\Debug\EntityFramework.xml
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Dal\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Dal\obj\Debug\eCommerce.Dal.csprojAssemblyReference.cache
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Dal\obj\Debug\eCommerce.Dal.csproj.CopyComplete
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Dal\obj\Debug\eCommerce.Dal.dll
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Dal\obj\Debug\eCommerce.Dal.pdb

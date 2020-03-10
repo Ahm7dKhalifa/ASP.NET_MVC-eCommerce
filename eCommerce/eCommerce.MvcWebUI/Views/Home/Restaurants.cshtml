@@ -1,0 +1,192 @@
+﻿@model IEnumerable<eCommerce.Entities.Model.Restaurant>
+@{
+    ViewBag.Title = "Restaurants";
+}
+
+@foreach (var group in Model.GroupBy(item => item.City.CityName)) 
+{
+    <div class="jumbotron-fluid" style="background-image: url(https://cdn.yemeksepeti.com/App_Themes/SiteHeaders/Yemeksonuc.jpg);height: 100px;background-size: cover">
+        <div class="container" style="text-align:left; padding-top:18px">
+            <h4 style="color:#191919">@group.Key</h4>
+            <p class="lead" style="font-size:15px;color:orange"><b>@group.Key Yemek Siparişi</b> <i class="fa fa-arrow-right "></i> <b style="color:black">Restoranlar</b>  </p>
+        </div>
+    </div>
+
+<div class="box">
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+                    <div class="box-part text-center" style=" padding:60px 0px;">
+
+                        <img src='@Url.Content("~/Upload/" + item.imgURL)' />
+
+                        <div class="title">
+                            <h4 style="color:#c4151c">@item.Name</h4>
+                        </div>
+                        <div class="text" style="margin-bottom:10px">
+                            <span style=" font-size:14px;">@item.Description.</span>
+                        </div>
+
+                        <div class="container" style="margin-bottom:3px">
+                            <div class="row">
+                                <div class="col-md-12">
+
+                                    <div class="row">
+
+                                        <div class="col-md-4 text-center" style="background-color:#d6d036;border: 2px solid white;">
+                                            <h5 style="color:white">Hız</h5>
+                                            <h1 class="rating-num" style="color:white">
+                                                7,6
+                                            </h1>
+
+
+                                        </div>
+                                        <div class="col-md-4 text-center" style="background-color:#a5c530;border: 2px solid white; ">
+                                            <h5 style="color:white">Servis</h5>
+                                            <h1 class="rating-num" style="color:white">
+                                                8,5
+                                            </h1>
+
+
+                                        </div>
+
+
+                                        <div class="col-md-4 text-center" style="background-color:#a5c530;border: 2px solid white; ">
+                                            <h5 style="color:white">Hız</h5>
+                                            <h1 class="rating-num" style="color:white">
+                                                8,6
+                                            </h1>
+
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="/Home/Menus/@item.RestaurantId" style="">Menüye Gözat...</a>
+
+                    </div>
+                </div>
+            }
+            @*<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+                    <div class="box-part text-center" style=" padding:60px 0px;">
+
+                        <img src="https://cdn.yemeksepeti.com/CategoryImages/TR_KASTAMONU/dellaveneziacafe_big.gif" />
+
+                        <div class="title">
+                            <h4 style="color:#c4151c">Della Venezia Cafe</h4>
+                        </div>
+                        <div class="text" style="margin-bottom:10px">
+                            <span style=" font-size:14px;">Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr scripta ocurreret qui ad.</span>
+                        </div>
+
+                        <div class="container" style="margin-bottom:3px">
+                            <div class="row">
+                                <div class="col-md-12">
+
+                                    <div class="row">
+
+                                        <div class="col-md-4 text-center" style="background-color:#bbc72e;border: 2px solid white;">
+                                            <h5 style="color:white">Hız</h5>
+                                            <h1 class="rating-num" style="color:white">
+                                                8,2
+                                            </h1>
+
+
+                                        </div>
+                                        <div class="col-md-4 text-center" style="background-color:#d6d036;border: 2px solid white; ">
+                                            <h5 style="color:white">Servis</h5>
+                                            <h1 class="rating-num" style="color:white">
+                                                7,6
+                                            </h1>
+
+
+                                        </div>
+
+
+                                        <div class="col-md-4 text-center" style="background-color:#e9c90f;border: 2px solid white; ">
+                                            <h5 style="color:white">Hız</h5>
+                                            <h1 class="rating-num" style="color:white">
+                                                7,3
+                                            </h1>
+
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#" style="">Menüye Gözat...</a>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+                    <div class="box-part text-center" style=" padding:60px 0px;">
+
+                        <img src="https://cdn.yemeksepeti.com/CategoryImages/pasaport-pizza-2017_big.gif" />
+
+                        <div class="title">
+                            <h4 style="color:#c4151c">Pasaport Pizza</h4>
+                        </div>
+                        <div class="text" style="margin-bottom:10px">
+                            <span style=" font-size:14px;">Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr scripta ocurreret qui ad.</span>
+                        </div>
+
+                        <div class="container" style="margin-bottom:3px">
+                            <div class="row">
+                                <div class="col-md-12">
+
+                                    <div class="row">
+
+                                        <div class="col-md-4 text-center" style="background-color:#bbc72e;border: 2px solid white;">
+                                            <h5 style="color:white">Hız</h5>
+                                            <h1 class="rating-num" style="color:white">
+                                                8,1
+                                            </h1>
+
+
+                                        </div>
+                                        <div class="col-md-4 text-center" style="background-color:#bbc72e;border: 2px solid white; ">
+                                            <h5 style="color:white">Servis</h5>
+                                            <h1 class="rating-num" style="color:white">
+                                                8,3
+                                            </h1>
+
+
+                                        </div>
+
+
+                                        <div class="col-md-4 text-center" style="background-color:#bbc72e;border: 2px solid white; ">
+                                            <h5 style="color:white">Hız</h5>
+                                            <h1 class="rating-num" style="color:white">
+                                                8,2
+                                            </h1>
+
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#" style="">Menüye Gözat...</a>
+
+                    </div>
+                </div>*@
+        </div>
+    </div>
+</div>
+}

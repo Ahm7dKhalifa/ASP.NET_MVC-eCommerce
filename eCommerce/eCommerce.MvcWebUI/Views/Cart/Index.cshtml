@@ -1,0 +1,86 @@
+﻿@model eCommerce.Entities.Model.Cart
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container mt-5">
+
+    @if (Model.CartLines.Count > 0)
+    {
+        <div class="row">
+            <div class="col-md-12">
+                <h2 style="margin-bottom:10px">Sepetim</h2>
+                <hr />
+                @foreach (var group in Model.CartLines.GroupBy(item => item.MenuItem.Menu.Restaurant.Name))
+                {
+                    <h4 style="color:orange">@group.Key</h4>
+
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Product Name</th>
+                                <th>Description</th>
+                                <th>Quantity</th>
+
+                                <th>Price</th>
+                                <th>SubTotal</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.CartLines)
+                            {
+                                <tr>
+                                    <td></td>
+                                    <td>@item.MenuItem.MenuItemTitle</td>
+                                    <td>@item.MenuItem.MenuItemDescription</td>
+                                    <td>@item.Quantity</td>
+                                    <td>@item.MenuItem.MenuItemPrice</td>
+                                    <td>@((item.MenuItem.MenuItemPrice * item.Quantity).ToString("c"))</td>
+                                    <td>
+                                        @using (Html.BeginForm("RemoveFromCart", "Cart"))
+                                        {
+                                            @Html.Hidden("id", item.MenuItem.MenuItemID)
+                                            <button type="submit" class="btn-sm btn btn-danger"><i class="fa fa-times"></i></button>
+
+                                        }
+                                    </td>
+                                </tr>
+                               
+
+                            }
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="5"></td>
+                                <td>Total : @Model.Total().ToString("c")</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <div class="col mb-2">
+                        <div class="row">
+                            <div class="col-sm-12  col-md-6">
+                                <button class="btn btn-block btn-outline-danger">Continue Shopping</button>
+                            </div>
+                            <div class="col-sm-12 col-md-6 text-right">
+                                <a href="/Cart/Checkout" class="btn btn-block btn-outline-success"> Checkout</a>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+            </div>
+        </div>
+
+    }
+    else
+    {
+        <div class="alert alert-secondary text-center" role="alert">
+            <i class="fa fa-info fa-4x" style="margin-right:2px;margin-bottom:5px"></i>
+            <h2> Sepetiniz boş gözüküyor!</h2> 
+        </div>
+    }
+</div>
+

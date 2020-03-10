@@ -1,0 +1,58 @@
+﻿@model IEnumerable<eCommerce.Entities.Model.City>
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+
+<div class="jumbotron">
+    <div class="container text-center">
+        <h1 class="display-4">Hemen siparişini ver !</h1>
+        <p class="lead">Tek tıkla kolayca sipariş verebilirsin. Önce şehrini seç.</p>
+        <hr class="my-4">
+        @foreach (var city in Model)
+        {
+            <a href="/Restaurant/Index/@city.CityID" class="btn btn-outline-danger my-2">@city.CityName</a>
+        }
+    </div>
+</div>
+
+<div class="container mt-4" style="margin-bottom:75px">
+    <h4 style="margin-bottom:15px">3 Adımda Siparişini Tamamla</h4>
+    <div class="card-deck">
+
+        <div class="card">
+            <img src="https://dummyimage.com/600x400/c4151b/fff" class="card-img-top" alt="..." width="250" height="150">
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text">Menülere gözat ve istediğin ürünleri seç ve sepetine ekle.</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <img src="https://dummyimage.com/600x400/c4151b/fff" class="card-img-top" alt="..." width="250" height="150">
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text">Sepetinde ürünleri görüntüle ve sipariş için son hazırlıklarını tamamla.</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://dummyimage.com/600x400/c4151b/fff" class="card-img-top" alt="..." width="250" height="150">
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text">Siparişini verdikten sonra sipariş durumunu kontrol et.</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+﻿@model IEnumerable<eCommerce.Entities.Model.UserOrderModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container mt-5 mb-5">
+    @if (Model.Any())
+    {
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Orders</h2>
+                <hr />
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Order Number</th>
+                            <th>Order Date</th>
+                            <th>Total</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.OrderNumber</td>
+                                <td>@item.OrderDate</td>
+                                <td>@item.Total.ToString("c")</td>
+                                @if (item.OrderState.ToString() == "0")
+                                {
+                                    <td><span class="badge" style="background-color:green;color:white">Completed</span></td>
+                                }
+                                else
+                                {
+                                    <td><span class="badge" style="background-color:red;color:white">Waiting</span></td>
+                                }
+                                <td>
+                                    @*@Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "btn-sm btn-primary" })*@
+                                    @Ajax.ActionLink("Details", "OrderDetails", "Account", new { id = item.ID }, new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "details" }, new { @style = "color:black" })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-secondary" role="alert">
+            Sipariş bulunmuyor.
+        </div>
+    }
+</div>
+
+<div id="details"></div>
+

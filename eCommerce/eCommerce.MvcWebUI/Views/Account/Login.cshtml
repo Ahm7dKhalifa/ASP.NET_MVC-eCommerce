@@ -1,0 +1,85 @@
+﻿@model eCommerce.Entities.Model.User
+@{
+    Layout = null;
+}
+
+    <html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="~/Content/login.css" rel="stylesheet" />
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-transparent " style="margin-top:20px;">
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse justify-content-md-center collapse" id="navbarsExample08" style="">
+                <div class="container">
+                    <ul class="navbar-nav mr-auto">
+
+                        <li class="nav-item">
+                            <div class="container" style="text-align:center">
+                                <span class="badge badge-secondary" style="background-color:white;color:gray;font-size:14px;">Sakarya Üniversitesi | </span>
+                                <span class="badge badge-secondary" style="font-size:13px;">Vahittin Zaim</span>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="jumbotron jumbotron-fluid" style="background-color:#dedede">
+                <div class="container-fluid">
+                    <br />
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="container-fluid">
+                                <img src="~/Content/sc2.png" height="450" width="750" class="img-fluid" style="animation: mover 1s infinite alternate;" />
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+
+                            @using (Html.BeginForm())
+                            {
+                                @Html.ValidationSummary()
+                                @Html.AntiForgeryToken()
+                                <div class="container-fluid" style="padding-right:50px">
+                                    <div class="col-md-12 login-right" style="border:1px solid lightgrey;border-radius:30px;padding:50px; box-shadow: 0 1px 9px 0 rgba(0, 0, 0, 0.6), 0 1px 10px 0 rgba(0, 0, 0, 0.19);background-color:white">
+                                        <input class="native-hidden" type="checkbox" height="75" width="75" />
+                                        <div class="row" style="margin-top:30px">
+                                            <div class="col-sm-12">
+                                                <i class="fa fa-user"></i>
+                                                @Html.TextBoxFor(model => model.Username, new { @class = "form-control", @placeholder = " Username", @style = "background-color:whitesmoke" })
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <i class="fa fa-lock"></i>
+                                                @Html.PasswordFor(model => model.Password, new { @class = "form-control", @placeholder = " Password", @style = "background-color:whitesmoke" })
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <input type="submit" style="width:80px;background-color:#dedede;float:right" value="Login" class="btn btn-default" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer style="text-align:center">
+            <p style="color:grey">&copy; @DateTime.Now.Year -Shopping Cart Application | Vahittin Zaim</p>
+        </footer>
+    </body>
+    </html>

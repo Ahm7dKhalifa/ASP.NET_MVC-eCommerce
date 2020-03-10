@@ -1,0 +1,65 @@
+﻿@model IEnumerable<eCommerce.Entities.Model.MenuItem>
+@{
+    ViewBag.Title = "Menus";
+}
+
+@foreach (var groupp in Model.GroupBy(item => item.Menu.Restaurant.Name))
+{
+    <div class="jumbotron-fluid" style="background-image: url(https://cdn.yemeksepeti.com/App_Themes/SiteHeaders/Yemeksonuc.jpg);height: 100px;background-size: cover">
+        <div class="container" style="text-align:left; padding-top:18px">
+            <h4 style="color:#191919">@groupp.Key</h4>
+            <p class="lead" style="font-size:15px;color:orange"><b>@groupp.Key Yemek Siparişi</b> <i class="fa fa-arrow-right "></i> <b style="color:black">Menüler</b>  </p>
+        </div>
+    </div>
+
+
+    <div class="container mb-5 mt-4">
+
+        <div class="row">
+            <div class="col-md-3">
+
+            </div>
+
+
+            <div class="col-md-9">
+                <div class="restaurantDetailBox None " id="menu_0">
+                    @foreach (var group in Model.GroupBy(item => item.Menu.MenuTitle))
+                    {
+                        <div class="head white">
+                            <h2><b>@group.Key</b></h2>
+                            <hr />
+                            <div class="description"></div>
+                        </div>
+                        foreach (var item in group)
+                        {
+                            <div class="listBody">
+                                <div class="row">
+                                    <div class="product col-md-3" style="margin-right:-100px">
+                                        <div class="row">
+                                            <input type="number" class="form-control text-center" value="1" style="width:25%">
+
+                                            <button type="submit" class="btn-sm btn-secondary"><i class="fa fa-plus"></i></button>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="product col-md-7">
+                                        <div class="product-info">
+                                            <a href="#" style="font-size:18px;color:grey"><strong>@item.MenuItemTitle</strong></a>
+                                        </div>
+                                        <div class="product">
+                                            <p style="font-size:12px"> @item.MenuItemDescription</p>
+                                        </div>
+                                    </div>
+                                    <div class="product-price col-md-2">
+                                        <span class="price">@item.MenuItemPrice TL</span>
+                                    </div>
+                                </div>
+                                <hr />
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>}

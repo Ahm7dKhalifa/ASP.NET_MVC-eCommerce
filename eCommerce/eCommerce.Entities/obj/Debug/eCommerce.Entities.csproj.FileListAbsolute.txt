@@ -1,0 +1,5 @@
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Entities\bin\Debug\eCommerce.Entities.dll
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Entities\bin\Debug\eCommerce.Entities.pdb
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Entities\obj\Debug\eCommerce.Entities.dll
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Entities\obj\Debug\eCommerce.Entities.pdb
+C:\Users\vahit\source\repos\eCommerce\eCommerce.Entities\obj\Debug\eCommerce.Entities.csprojAssemblyReference.cache

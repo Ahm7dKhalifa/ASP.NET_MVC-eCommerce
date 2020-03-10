@@ -1,0 +1,49 @@
+﻿@model eCommerce.Entities.Model.Cart
+
+
+<div class="card" style="margin-bottom:5px">
+    <div class="card-header text-center" style="background-color:#c4151c">
+        
+            <b style="color:white">Yemek Sepetim </b>
+        
+    </div>
+   <div class="card-header" style="background-color:orange">
+        @foreach (var group in Model.CartLines.GroupBy(item => item.MenuItem.Menu.Restaurant.Name))
+        {
+         <b style="color:white">@group.Key </b>
+        }
+
+   </div>
+        @if (Model.CartLines.Count > 0)
+        {
+            foreach (var item in Model.CartLines)
+            {
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    @item.MenuItem.MenuItemTitle
+                    <span class="badge badge-secondary">@item.Quantity</span>
+                    <span class="badge badge-secondary badge-pill">@((item.MenuItem.MenuItemPrice * item.Quantity).ToString("c"))</span>
+                </li>
+            }
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <b>Total : @Model.Total().ToString("c") </b>
+            </li>
+        }
+        else
+        {
+            <p class="card-text text-center" style="color:black"> <i class="fa fa-shopping-cart fa-3x"></i> Sepetiniz henüz boş.</p>
+        }
+
+ 
+    <div class="card-footer">
+        @if (Model.CartLines.Count > 0)
+        {
+            @Html.ActionLink("Sepeti temizle", "ClearCart", "Cart", new { @class = "btn-sm btn-danger", @style = "" })
+            @Html.ActionLink("Sepete git", "Index", "Cart", new { @class = "btn-sm btn-success", @style = "float:right" })
+        }
+        else
+        {
+
+        }
+    </div>
+</div>
+
